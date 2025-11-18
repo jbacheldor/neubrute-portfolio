@@ -12,7 +12,12 @@ const Navigation:React.FC = () => {
             ))}
             <style jsx>
                 {`
+                    @font-face {
+                        font-family: 'Baloo-2-300';
+                        src: url('/fonts/Baloo2-Regular.ttf'); // 
+                    }
                     #nav-box {
+                        font-family: Baloo-2-300;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;

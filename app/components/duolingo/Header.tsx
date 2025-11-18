@@ -16,7 +16,7 @@ const Header:React.FC = () => {
         <style jsx>
             {`
                 @font-face {
-                    font-family: 'Baloo-2';
+                    font-family: 'Baloo-2-900';
                     src: url('/fonts/Baloo2-ExtraBold.ttf'); // 
                 }
                 #header-body {
@@ -28,7 +28,7 @@ const Header:React.FC = () => {
                     margin: 20px;
                     border-radius: 15px;
                     box-shadow: 4px 10px #6db55a, 2px 13px #000, 7px 12px #000;
-                    font-family: "Baloo-2";
+                    font-family: "Baloo-2-900";
 
                 }
 
