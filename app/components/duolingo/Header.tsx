@@ -3,7 +3,7 @@
 const Header:React.FC = () => {
 
     return (
-        <div id="header-body">
+        <div id="ABOUT">
             <div id="header">
                 <span id="section">SECTION 1, UNIT 1</span>
                 <span id="intro">Introduce yourself</span>
@@ -19,7 +19,7 @@ const Header:React.FC = () => {
                     font-family: 'Baloo-2-900';
                     src: url('/fonts/Baloo2-ExtraBold.ttf'); // 
                 }
-                #header-body {
+                #ABOUT {
                     background-color: #97FB7D;
                     display: flex;
                     flex-direction: row;

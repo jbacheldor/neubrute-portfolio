@@ -26,7 +26,7 @@ const Navigation:React.FC = () => {
                         outline: 2px solid black;
                         box-shadow: 4px 4px black;
                         border-radius: 0 20px 20px 0;
-                        position: absolute;
+                        position: fixed;
                         text-align: right;
                         top: 5%;
                         left: -165px;
