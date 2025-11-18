@@ -14,7 +14,7 @@ const Navigation:React.FC = () => {
                 {`
                     @font-face {
                         font-family: 'Baloo-2-300';
-                        src: url('/fonts/Baloo2-Regular.ttf'); // 
+                        src: url('/fonts/Baloo2-Regular.ttf'); 
                     }
                     #nav-box {
                         font-family: Baloo-2-300;
