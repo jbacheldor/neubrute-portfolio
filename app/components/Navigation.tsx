@@ -30,6 +30,7 @@ const Navigation:React.FC = () => {
                         text-align: right;
                         top: 5%;
                         left: -115px;
+                        z-index: 10;
                         -webkit-transition-property: all;
                         -webkit-transition-duration: 2s;
                     }

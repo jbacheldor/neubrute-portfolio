@@ -28,6 +28,7 @@ const Path:React.FC = () => {
                         width: 100%;
                         display: flex;
                         justify-content: center;
+                        position: relative;
                     }
                     #path-body {
                         display: flex;
