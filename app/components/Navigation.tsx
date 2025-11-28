@@ -21,7 +21,7 @@ const Navigation:React.FC = () => {
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
-                        width: 200px;
+                        width: 140px;
                         background-color: #FFF8E9;
                         outline: 2px solid black;
                         box-shadow: 4px 4px black;
@@ -29,15 +29,15 @@ const Navigation:React.FC = () => {
                         position: fixed;
                         text-align: right;
                         top: 5%;
-                        left: -165px;
+                        left: -115px;
                         -webkit-transition-property: all;
-                        -webkit-transition-duration: 3s;
+                        -webkit-transition-duration: 2s;
                     }
                     .nav-links {
                         transform: translateX(-70%);
                         padding-right: 10px;
                         -webkit-transition-property: all;
-                        -webkit-transition-duration: 3s;
+                        -webkit-transition-duration: 2s;
                     }
                     #nav-box:hover, .nav-links {
                         cursor: pointer;

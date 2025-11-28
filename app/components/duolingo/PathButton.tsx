@@ -27,14 +27,14 @@ const PathButton:React.FC<Props> = ({type, right, top, data}) => {
             {tooltip && 
                 <div id="tool-tip"  style={{top: `${top*110 + 250}px`, right: `${right - 6}%`}}>
                     {data && 
-                        <div>
+                        <>
                             <h3>{data.title}</h3>
                             <span>{data.body}</span>
                             <div id="bottom-tool">
                                 <span id="tool-loc">{data.location}</span>
                                 <span>{data.date}</span>
                             </div>
-                        </div>
+                        </>
                     }
                 </div>
             }
@@ -64,18 +64,20 @@ const PathButton:React.FC<Props> = ({type, right, top, data}) => {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        padding-right: 15px;
-                        padding-top: 4px;
+                        // padding-right: 15px;
+                        padding-top: 5px;
+                        padding-bottom: 10px;
                     }
                     div#tool-tip {
                         font-family: Baloo-2-300;
                         position: absolute;
                         background-color: #FBD17D;
                         width: 350px;
-                        height: 150px;
+                        min-height: 150px;
                         border: 2px black solid;
                         border-radius: 20px;
                         padding-left: 15px;
+                        padding-right: 15px;
                         box-shadow: 4px 4px black;
                         z-index: 2;
                     }
