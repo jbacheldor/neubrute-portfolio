@@ -8,7 +8,7 @@ const Navigation:React.FC = () => {
     return (
         <div id="nav-box" >
             {sections.map((value, index)=> (
-                <a style={{backgroundColor : value.color}} href={`#${value.text}`} color={value.color}><div className="nav-links" key={index}>{value.text}</div></a>
+                <a key={index} style={{backgroundColor : value.color}} href={`#${value.text}`} color={value.color}><div className="nav-links" key={index}>{value.text}</div></a>
             ))}
             <style jsx>
                 {`
