@@ -16,6 +16,7 @@ const Welcome:React.FC = () => {
     const techStack = ['Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro', 'Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro']
 
     const getTime = () => {
+        console.log('how much is this running')
         const date = new Date();
         const parsed = date.toLocaleString('en-US', {
             timeZone: 'America/New_York',
@@ -29,11 +30,35 @@ const Welcome:React.FC = () => {
             second: parsed[2],
             pm: pm[1] == 'PM' ? true : false
         })
+
+        return Number(pm[0])
     }
 
     useEffect(()=> {
-        getTime()
+        // this gets the difference between the times
+        const seconds = getTime()
+        const remaining = 60000 - (seconds * 1000)
+
+        // this calls the difference ONCE and then sets interval for the rest
+         setTimeout(()=> {
+            getTime()
+
+            const timeInterval = setInterval(() => {
+                getTime()
+            }, 60000);
+
+            return () => clearInterval(timeInterval);
+
+        }, remaining)
     }, [])
+
+    useEffect(()=> {
+        const timeInterval = setInterval(() => {
+            getTime()
+        }, 60000);
+
+        return () => clearInterval(timeInterval);
+    }, [time])
 
     return (
         <div id="WELCOME">
@@ -63,12 +88,14 @@ const Welcome:React.FC = () => {
                     <p>I’m a passionate web developer focused on end-to-end development from project specs, ux/ui, to optimization and scaling. I focus on bringing to life creative ideas in original ways.</p>
                 </div>
             </div>
-            <div id="carosel">
-                {techStack.map((val, index)=> (
-                    <div className="techStack" key={index}>
-                        {val}
-                    </div>
-                ))}
+            <div id="carosel-wrapper">
+                <div id="carosel">
+                    {techStack.map((val, index)=> (
+                        <div className="techStack" key={index}>
+                            {val}
+                        </div>
+                    ))}
+                </div>
             </div>
         
         <style jsx>
@@ -97,14 +124,6 @@ const Welcome:React.FC = () => {
                 display: flex;
                 align-items: center;
             }
-            img#star-1 {
-                position: absolute;
-                top: -5px;
-            }
-            img#star-2 {
-                position: absolute;
-                top: -5px;
-            }
             #intro-badge {
                 background-color: #FFF8E9;
                 border: 2px solid black;
@@ -122,9 +141,6 @@ const Welcome:React.FC = () => {
             #intro-badge > p {
                 margin: 0 20px;
             }
-            #profile-pic {
-                border-radius: 20px;
-            }
             h4 {
                 font-family: 'Baloo-2-900';
                 font-size: 20px;
@@ -134,10 +150,13 @@ const Welcome:React.FC = () => {
                 border-radius: 20px;
                 border: 2px solid black;
             }
+            #carosel-wrapper {
+                width: 100wv;
+                overflow: hidden;
+            }
             #carosel {
                 display: flex;
                 flex-direction: row;
-                overflow: hidden;
                 animation: scroll 50s linear infinite;
                 width: calc(250px * 14);
             }
