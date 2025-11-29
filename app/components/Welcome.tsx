@@ -16,7 +16,6 @@ const Welcome:React.FC = () => {
     const techStack = ['Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro', 'Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro']
 
     const getTime = () => {
-        console.log('how much is this running')
         const date = new Date();
         const parsed = date.toLocaleString('en-US', {
             timeZone: 'America/New_York',
@@ -51,14 +50,6 @@ const Welcome:React.FC = () => {
 
         }, remaining)
     }, [])
-
-    useEffect(()=> {
-        const timeInterval = setInterval(() => {
-            getTime()
-        }, 60000);
-
-        return () => clearInterval(timeInterval);
-    }, [time])
 
     return (
         <div id="WELCOME">
