@@ -57,11 +57,15 @@ const Contact:React.FC = () => {
                         flex-direction: column;
                         font-size: 20px;
                     }
+                    label > span {
+                        padding-left: 5px;
+                    }
                     input, textarea {
                         font-family: Baloo-2-300;
-                        padding: 2px 5px;
+                        padding: 2px 10px;
+                        box-shadow: 4px 4px black;
                         border: 2px solid black;
-                        border-radius: 10px;
+                        border-radius: 20px;
                         background-color: #FFF8E9;
                         width: 50ch;
                     }
@@ -74,6 +78,8 @@ const Contact:React.FC = () => {
                         padding: 5px 15px;
                         font-size: 20px;
                         align-self: center;
+                        margin-top: 10px;
+                        margin-bottom: 0px;
                     }
                     input:focus, textarea:focus {
                         outline: none;
