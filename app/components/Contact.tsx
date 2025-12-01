@@ -59,6 +59,17 @@ const Contact:React.FC = () => {
             </form>
             <style jsx>
                 {`
+                    @media (min-width: 200px){
+                        input, textarea {
+                            width: 30ch;
+                        }
+                    }
+
+                    @media (min-width: 800px){
+                        input, textarea {
+                            width: 50ch;
+                        }
+                    }
                     #CONTACT {
                         font-family: 'Baloo-2-900';
                         display: flex;
@@ -95,7 +106,6 @@ const Contact:React.FC = () => {
                         border: 2px solid black;
                         border-radius: 20px;
                         background-color: #FFF8E9;
-                        width: 50ch;
                     }
                     button {
                         background-color: #97FB7D;

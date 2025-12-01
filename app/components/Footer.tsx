@@ -12,6 +12,18 @@ const Footer:React.FC = () => {
             <span>jessica.bacheldor@gmail.com</span>
             <style jsx>
                 {`
+                    @media (min-width: 200px){
+                        #footer {
+                            width: 80%;
+                            font-size: 18px;
+                        }
+                    }
+                    @media (min-width: 800px){
+                        #footer {
+                            width: 75%;
+                            font-size: 20px;
+                        }
+                    }
                     #icons {
                         display: flex;
                         flex-direction: row;
@@ -21,8 +33,8 @@ const Footer:React.FC = () => {
                     #footer {
                         background-color: #FBE87D;
                         font-family: 'Baloo-2-900';
-                        font-size: 20px;
-                        width: 75%;
+                        // font-size: 20px;
+                        // width: 75%;
                         box-shadow: 4px 4px black;
                         border: 2px solid black;
                         border-radius: 20px;

@@ -85,13 +85,26 @@ const Welcome:React.FC = () => {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(calc(-250px * 7))}
             }
-            #middle-section {
-                margin: 5%;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                width: 70%;
+            @media (min-width: 200px){
+                #middle-section {
+                    margin: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 70%;
+                }
+            }
+
+            @media (min-width: 800px) {
+                #middle-section {
+                    margin: 5%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-around;
+                    align-items: center;
+                    width: 70%;
+                }
             }
             #left-side {
                 flex-direction: column;

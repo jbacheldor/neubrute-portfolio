@@ -35,11 +35,6 @@ const Project:React.FC<Props> = ({title, website, date, image, description, repo
                 #desc {
                     margin: 0 10px 50px 10px;
                 }
-                #year {
-                    // position: absolute;
-                    // bottom: 15px;
-                    // left: 20px;
-                }
                 #bottom {
                     display: flex;
                     flex-direction: row;
@@ -72,9 +67,6 @@ const Project:React.FC<Props> = ({title, website, date, image, description, repo
                 }
                 h3 {
                     font-family: 'Baloo-2-900';
-                }
-                p {
-                    font-family: 'Baloo-2-300';
                 }
             `}
         </style>

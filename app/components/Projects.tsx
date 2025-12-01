@@ -77,25 +77,56 @@ const Projects:React.FC = () => {
             <div id="Color-Wheel">
                 <div id="third"><img ref={colorwheel} id="" src="./group 24.svg"></img></div>
             </div>
+            <div id='project-wrapper'>
             <div id="project-list">
             {ProjectList.map((val, index)=> (
                 <Project key={index} {...val}/>
             ))}
             </div>
+            </div>
             <style jsx>
                 {`
-                    #PROJECTS {
-                        display: flex;
-                        justify-content: center;
-                        min-height: 100vh;
-                        
+                    @media (min-width: 200px){
+                        #Color-Wheel {
+                            min-height: 300px;
+                        }
+                        #third {
+                            margin-top: 70px;
+                            width: 220px;
+                            margin-left: 0px;
+                        }
+                        #project-list {
+                            margin-top: 100px;
+                            width: 70%;
+                        }
+                        #project-wrapper {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+
+                    @media (min-width: 800px){
+                        #Color-Wheel {
+                            min-height: 600px;
+                        }
+                        #third {
+                            width: 400px;
+                            margin-top: 0px;
+                            margin-left: 200px;
+                        }
+                        #project-list {
+                            margin-top: 600px;
+                            width: 60%;
+                        }
+                        #PROJECTS {
+                            display: flex;
+                            justify-content: center;
+                        }
                     }
                     #project-list {
                         display: flex;
                         flex-direction: row;
                         overflow: scroll;
-                        margin-top: 600px;
-                        width: 60%;
                         border: 2px solid black;
                         margin-bottom: 50px;
                         border-radius: 20px;
@@ -115,12 +146,12 @@ const Projects:React.FC = () => {
                     }
                     #third {
                         position: absolute;
-                        width: 400px;
+                        // width: 400px;
                         // animation: linear spin3 10s 1 forwards;
                     }
                     #Color-Wheel {
                         position: relative;
-                        min-height: 600px;
+                        // min-height: 600px;
                     }
                     @keyframes spin3 {
                         from {

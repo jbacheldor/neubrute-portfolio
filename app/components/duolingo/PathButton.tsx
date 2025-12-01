@@ -17,6 +17,8 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
     const [tooltip, setToolTip] = useState(false) 
     gsap.registerPlugin(ScrollTrigger);
 
+    let rightOffset
+
     const openToolTip = () => {
         // console.log(object)
         setToolTip(!tooltip)
@@ -43,13 +45,17 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
     }, [])
 
 
+    if(window.innerWidth < 600) rightOffset = `${60- right}`
+    else rightOffset = `${right-6}`
+
+
     return (
         <div>
             <div id="button" style={{right: `${right}%`, top: `${top*110 + 150}px`}} onClick={()=>openToolTip()}>
                 <img src={type}/>
             </div>
             {/* {tooltip &&  */}
-                <div id="tool-tip" className={`tool-tip-${index}`} style={{top: `${top*110 + 250}px`, right: `${right - 6}%`}}>
+                <div id="tool-tip" className={`tool-tip-${index}`} style={{top: `${top*110 + 250}px`, right: `${rightOffset}%`}}>
                     {data && 
                         <>
                             <h3>{data.title}</h3>
@@ -64,6 +70,14 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
             {/* } */}
             <style jsx>
                 {`
+                    @media(min-width: 200px){
+                        #tool-tip {
+                            right: 40%;
+                        }
+                    }
+                    @media (min-width: 800px){
+
+                    }
                     .tool-tip-${index} {
                         visibility: hidden;
                     }
