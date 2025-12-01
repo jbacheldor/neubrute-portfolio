@@ -67,20 +67,8 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
                     .tool-tip-${index} {
                         visibility: hidden;
                     }
-                    @font-face {
-                        font-family: 'Baloo-2-300';
-                        src: url('/fonts/Baloo2-Regular.ttf'); 
-                    }
-                    @font-face {
-                        font-family: 'Baloo-2-900';
-                        src: url('/fonts/Baloo2-ExtraBold.ttf'); 
-                    }
-                    @font-face {
-                        font-family: 'Baloo-2-700';
-                        src: url('/fonts/Baloo2-Bold.ttf'); 
-                    }
                     #tool-loc {
-                        font-family: 'Baloo-2-700';
+                        font-family: 'Baloo-2-300';
                     }
                     h3 {
                         font-family: Baloo-2-900;

@@ -34,21 +34,11 @@ const Welcome:React.FC = () => {
     }
 
     useEffect(()=> {
-        // this gets the difference between the times
-        const seconds = getTime()
-        const remaining = 60000 - (seconds * 1000)
-
-        // this calls the difference ONCE and then sets interval for the rest
-         setTimeout(()=> {
-            getTime()
-
-            const timeInterval = setInterval(() => {
+        const timeInterval = setInterval(() => {
                 getTime()
-            }, 60000);
+            }, 1000);
 
-            return () => clearInterval(timeInterval);
-
-        }, remaining)
+        return () => clearInterval(timeInterval);
     }, [])
 
     return (
@@ -74,7 +64,7 @@ const Welcome:React.FC = () => {
                 <div id="intro-badge">
                     <Image style={{position: 'absolute', top: '-20px', right: '-20px'}} id="star-1" alt="star2" height={60} width={60} src="/Star 2.svg"/> 
                     <Image style={{position: 'absolute', top: '-20px', left: '-20px'}} id="star-2" alt="star1" height={60} width={60} src="/Star 1.svg"/> 
-                    <Image style={{borderRadius: "20px"}} id="profile-pic" alt="profile-picture" height={200} width={300} src="/young-me.png"/>
+                    <Image style={{borderRadius: "20px"}} id="profile-pic" alt="profile-picture" height={200} width={300} src="/jess-2.png"/>
                     <h4>Full-Stack Web Developer</h4>
                     <p>I’m a passionate web developer focused on end-to-end development from project specs, ux/ui, to optimization and scaling. I focus on bringing to life creative ideas in original ways.</p>
                 </div>
@@ -91,14 +81,6 @@ const Welcome:React.FC = () => {
         
         <style jsx>
             {`
-            @font-face {
-                font-family: 'Baloo-2-300';
-                src: url('/fonts/Baloo2-Regular.ttf'); 
-            }
-            @font-face {
-                font-family: 'Baloo-2-900';
-                src: url('/fonts/Baloo2-ExtraBold.ttf'); // 
-            }
             @keyframes scroll {
                 0% { transform: translateX(0); }
                 100% { transform: translateX(calc(-250px * 7))}
@@ -109,6 +91,7 @@ const Welcome:React.FC = () => {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
+                width: 70%;
             }
             #left-side {
                 flex-direction: column;
@@ -142,7 +125,7 @@ const Welcome:React.FC = () => {
                 border: 2px solid black;
             }
             #carosel-wrapper {
-                width: 100wv;
+                width: 80%;
                 overflow: hidden;
             }
             #carosel {
@@ -200,6 +183,11 @@ const Welcome:React.FC = () => {
             #WELCOME {
                 font-family: Baloo-2-300;
                 position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             #top {
                 font-family: Baloo-2-900;
