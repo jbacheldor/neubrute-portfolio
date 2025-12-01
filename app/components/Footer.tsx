@@ -12,10 +12,6 @@ const Footer:React.FC = () => {
             <span>jessica.bacheldor@gmail.com</span>
             <style jsx>
                 {`
-                    @font-face {
-                        font-family: 'Baloo-2-900';
-                        src: url('/fonts/Baloo2-ExtraBold.ttf'); // 
-                    }
                     #icons {
                         display: flex;
                         flex-direction: row;

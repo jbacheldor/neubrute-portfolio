@@ -32,14 +32,6 @@ const Project:React.FC<Props> = ({title, website, date, image, description, repo
             </div>
         <style jsx>
             {`
-                @font-face {
-                    font-family: 'Baloo-2-300';
-                    src: url('/fonts/Baloo2-Regular.ttf'); 
-                }
-                @font-face {
-                    font-family: 'Baloo-2-900';
-                    src: url('/fonts/Baloo2-ExtraBold.ttf'); // 
-                }
                 #desc {
                     margin: 0 10px 50px 10px;
                 }

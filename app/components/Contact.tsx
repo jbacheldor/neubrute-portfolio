@@ -59,16 +59,8 @@ const Contact:React.FC = () => {
             </form>
             <style jsx>
                 {`
-                    @font-face {
-                        font-family: 'Baloo-2-300';
-                        src: url('/fonts/Baloo2-Regular.ttf'); 
-                    }
-                    @font-face {
-                        font-family: 'Baloo-2-900';
-                        src: url('/fonts/Baloo2-ExtraBold.ttf'); // 
-                    }
                     #CONTACT {
-                        font-family: Baloo-2-900;
+                        font-family: 'Baloo-2-900';
                         display: flex;
                         justify-content: center;
                     }
@@ -97,7 +89,7 @@ const Contact:React.FC = () => {
                         padding-left: 5px;
                     }
                     input, textarea {
-                        font-family: Baloo-2-300;
+                        font-family: 'Baloo-2-300';
                         padding: 2px 10px;
                         box-shadow: 4px 4px black;
                         border: 2px solid black;
