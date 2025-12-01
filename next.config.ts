@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   env: {
     PATHNAME: process.env.PATHNAME,
     TOKEN: process.env.TOKEN,
-    DB_URL: process.env.DBURL
+    DBURL: process.env.DBURL
   }
 };
 
