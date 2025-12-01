@@ -1,38 +1,42 @@
 'use client'
 
-import { useState } from "react";
-
 const Navigation:React.FC = () => {
-    const sections = [{text: "WELCOME", color: "#97FB7D"}, {text: "ABOUT", color: "#7DCBFB"}, {text: "PROJECTS", color: "#FBA17D"}, {text: "DESIGN", color: "#FBD17D"}, {text: "CONTACT", color: "#FBE87D"}];
+    const sections = [{text: "WELCOME", color: "#97FB7D"}, {text: "ABOUT", color: "#7DCBFB"}, {text: "PROJECTS", color: "#FBA17D"}, {text: "DESIGN - WIP", color: "#FBD17D"}, {text: "CONTACT", color: "#FBE87D"}];
 
     return (
         <div id="nav-box" >
             {sections.map((value, index)=> (
-                <a style={{backgroundColor : value.color}} href={`#${value.text}`} color={value.color}><div className="nav-links" key={index}>{value.text}</div></a>
+                <a key={index} style={{backgroundColor : value.color}} href={`#${value.text}`} color={value.color}><div className="nav-links" key={index}>{value.text}</div></a>
             ))}
             <style jsx>
                 {`
+                    @font-face {
+                        font-family: 'Baloo-2-300';
+                        src: url('/fonts/Baloo2-Regular.ttf'); 
+                    }
                     #nav-box {
+                        font-family: Baloo-2-300;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
-                        width: 200px;
+                        width: 140px;
                         background-color: #FFF8E9;
                         outline: 2px solid black;
                         box-shadow: 4px 4px black;
                         border-radius: 0 20px 20px 0;
-                        position: absolute;
+                        position: fixed;
                         text-align: right;
                         top: 5%;
-                        left: -165px;
+                        left: -115px;
+                        z-index: 10;
                         -webkit-transition-property: all;
-                        -webkit-transition-duration: 3s;
+                        -webkit-transition-duration: 2s;
                     }
                     .nav-links {
                         transform: translateX(-70%);
                         padding-right: 10px;
                         -webkit-transition-property: all;
-                        -webkit-transition-duration: 3s;
+                        -webkit-transition-duration: 2s;
                     }
                     #nav-box:hover, .nav-links {
                         cursor: pointer;

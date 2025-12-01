@@ -1,15 +1,18 @@
 @import "tailwindcss";
+@font-face {
+    font-family: 'Baloo-2-300';
+    src: url('/fonts/Baloo2-Regular.ttf');
+}
+
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --baloo-300: @font-face {
+    font-family: 'Baloo-2-300';
+    src: url('/fonts/Baloo2-Regular.ttf');
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +21,13 @@
     --foreground: #ededed;
   }
 }
-
 body {
+  @font-face {
+    font-family: 'Baloo-2-300';
+    src: url('/fonts/Baloo2-Regular.ttf');
+  }
   background-image: url("/background-img.png");
   /* background: var(--background); */
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Baloo-2-300, var(--baloo-300);
 }

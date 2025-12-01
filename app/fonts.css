@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('./Baloo2-Bold.ttf') format('ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('./Baloo2-ExtraBold.ttf') format('ttf');
+    font-weight: bolder;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('./Baloo2-Medium.ttf') format('ttf'),
+    font-weight: medium;
+    font-style: normal;
+    font-display: normal;
+}
+
+
+@font-face {
+    font-family: 'Baloo 2';
+    src: url('./Baloo2-Regular.ttf') format('ttf');
+    font-weight: regular;
+    font-style: normal;
+    font-display: normal;
+}
