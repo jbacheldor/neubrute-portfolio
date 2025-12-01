@@ -16,7 +16,7 @@ const ProjectList = [
         repo: 'https://jbacheldor.github.io/dragAndDropHangul/'
     },
     {
-        image: '/conjugation.png',
+        image: '/verb.png',
         title: 'Japanese Verb Conjugation',
         description: 'A vanilla js game designed to help teach Japanese conjugation to beginners by matching vocabulary with grammar points with when they are introduced in the Japanese textbook: Genki.',
         date: '2025',
@@ -66,38 +66,9 @@ const Projects:React.FC = () => {
             ease: "linear"
         });
 
-        // this is working but it's too much
-        // too quick - need to work on the triggers
-        // gsap.to(colorwheel.current, {
-        //     scrollTrigger: {
-        //         trigger: "#Color-Wheel",
-        //         start: 'bottom bottom',
-        //         end: "45% 100%",
-        //         // markers: true
-        //     },
-        //     scrub: 1,
-        //     // start: 'bottom bottom',
-        //     repeat: 0,
-        //     duration: 2,
-        //     rotationZ: -0,
-        //     x: 0,
-        // });
 
 
     }, [])
-
-
-    // ScrollTrigger.create({
-    //     // element that triggers the animation
-    //     trigger: colorwheel.current,
-    //     // 
-    //     pin: true,
-    //     pinSpacing: false,
-    //     // scroll position where animation should begin
-    //     start: "center center",
-    //     end: ""
-    // });
-        
 
 
 
@@ -105,9 +76,6 @@ const Projects:React.FC = () => {
         <div id="PROJECTS">
             <div id="Color-Wheel">
                 <div id="third"><img ref={colorwheel} id="" src="./group 24.svg"></img></div>
-                {/* <div id="first"><img id="" src="/group 2.svg"/></div>
-                <div id="second"><img id="" src="/group 3.svg"/></div>
-                <div id="third"><img id="" src="/group 4.svg"/></div> */}
             </div>
             <div id="project-list">
             {ProjectList.map((val, index)=> (
@@ -127,7 +95,7 @@ const Projects:React.FC = () => {
                         flex-direction: row;
                         overflow: scroll;
                         margin-top: 600px;
-                        width: 90%;
+                        width: 60%;
                         border: 2px solid black;
                         margin-bottom: 50px;
                         border-radius: 20px;

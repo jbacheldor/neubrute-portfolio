@@ -109,6 +109,7 @@ const Welcome:React.FC = () => {
                 flex-direction: row;
                 justify-content: space-around;
                 align-items: center;
+                width: 70%;
             }
             #left-side {
                 flex-direction: column;
@@ -142,7 +143,7 @@ const Welcome:React.FC = () => {
                 border: 2px solid black;
             }
             #carosel-wrapper {
-                width: 100wv;
+                width: 80%;
                 overflow: hidden;
             }
             #carosel {
@@ -200,6 +201,11 @@ const Welcome:React.FC = () => {
             #WELCOME {
                 font-family: Baloo-2-300;
                 position: relative;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
             }
             #top {
                 font-family: Baloo-2-900;

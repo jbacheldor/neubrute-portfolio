@@ -17,7 +17,7 @@ export const buttonPaths = [
         date: '2020-2022'}}, 
     {type: '/star-button.svg', data: {
         title: 'Front-End Engineer', 
-        body: '', 
+        body: 'Developer on a suite of web apps designed to assist users in managing their technology utilizing a tech stack of React, Typescript, GraphQL, Electron, and Azure.', 
         location: 'General Electric', 
         date: '2022-2024'}}, 
     {type: '/star-button.svg', data: {
@@ -30,19 +30,9 @@ export const buttonPaths = [
         body: 'Currently pursing a masters in Computer Science', 
         location: 'Georgia Institute of Technology', 
         date: 'Exp: 2027'}},  
-    // {type: '/star-button.svg', data: {
-    //     title: 'B.A. and B.S.', 
-    //     body: 'Graduated with a degree in English and Computer Science', 
-    //     location: 'University of Michigan - Dearborn', 
-    //     date: '2019'}}, 
     {type: '/neu-brute-chest-close.svg', data: {
         title: 'Job Offer!', 
-        body: 'You need x more interviews before you get to this point! ', 
+        body: 'Currently looking for roles where I can expand my web developer expertise through pwa, optimization, animations, auth, and more', 
         location: 'Your_Company_Here', 
         date: '2025'}},  
-    {type: '/tbh-button.svg', data: {
-        title: '', 
-        body: '', 
-        location: '', 
-        date: 'And Beyond'}}
 ]
