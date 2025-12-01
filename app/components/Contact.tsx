@@ -34,7 +34,6 @@ const Contact:React.FC = () => {
                         font-family: Baloo-2-900;
                         display: flex;
                         justify-content: center;
-                        
                     }
                     h2 {
                         font-size: 40px;

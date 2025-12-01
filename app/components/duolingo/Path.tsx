@@ -18,7 +18,7 @@ const Path:React.FC = () => {
             <div id="path">
                 {buttonPaths.map((value, index)=> {
                     const options = [50, 45, 40, 45, 50, 55, 50, 45, 40]
-                    return <div key={index}><PathButton data={value?.data} right={options[index]} top={index} type={value.type}/></div>
+                    return <div key={index}><PathButton data={value?.data} index={index} right={options[index]} top={index} type={value.type}/></div>
                 })}
             </div>
         </div>
