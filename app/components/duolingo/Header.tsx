@@ -5,10 +5,11 @@ const Header:React.FC = () => {
     return (
         <div id="ABOUT">
             <div id="header">
-                <span id="section">SECTION 1, UNIT 1</span>
-                <span id="intro">Introduce yourself</span>
+                <span id="intro">Professional Career</span>
+                <span id="section" style={{fontSize: '18px'}}>About Me</span>
             </div>
             <div id="resume-button">
+                <span id="section">Resume</span>
                 <a target="_blank" href="/Jessica-Bacheldor-Resume.pdf">
                     <img src="/resume.svg" width={"45px"} height={"45px"}/> 
                 </a>
@@ -16,7 +17,7 @@ const Header:React.FC = () => {
         <style jsx>
             {`
                 #ABOUT {
-                    background-color: #97FB7D;
+                    background-color: var(--green);
                     display: flex;
                     flex-direction: row;
                     width: 80%;
@@ -32,6 +33,7 @@ const Header:React.FC = () => {
 
                 }
                 span#intro {
+                    font-size: 20px;
                     color: black;
                 }
                 span#section {
@@ -41,12 +43,23 @@ const Header:React.FC = () => {
                     padding: 20px;
                     border: 3px solid black;
                     border-radius: 0 15px 15px 0;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                #resume-button:hover {
+                    background-color:  var(--d-green);
+                    transform: translateY(1px);
+                    cursor: pointer;
+                }
+                #resume-button:hover > span {
+                    color: black;
                 }
                 #header {
                     display: flex;
                     flex-direction: column;
                     flex: 2;
-                    padding: 20px;
+                    padding: 15px;
                     border: 3px solid black;
                     border-radius: 15px 0 0 15px;
                 }

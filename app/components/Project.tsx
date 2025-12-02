@@ -46,7 +46,7 @@ const Project:React.FC<Props> = ({title, website, date, image, description, repo
                     bottom: 10px;
                 }
                 #Project-Card {
-                    background-color: #FFF8E9;
+                    background-color: var(--cream);
                     box-shadow: 4px 4px black;
                     border: 2px solid black;
                     text-align: center;

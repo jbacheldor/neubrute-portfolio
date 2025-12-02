@@ -11,17 +11,13 @@ const Navigation:React.FC = () => {
             ))}
             <style jsx>
                 {`
-                    @font-face {
-                        font-family: 'Baloo-2-300';
-                        src: url('/fonts/Baloo2-Regular.ttf'); 
-                    }
                     #nav-box {
                         font-family: Baloo-2-300;
                         display: flex;
                         flex-direction: column;
                         align-items: flex-end;
                         width: 140px;
-                        background-color: #FFF8E9;
+                        background-color: var(--cream);
                         outline: 2px solid black;
                         box-shadow: 4px 4px black;
                         border-radius: 0 20px 20px 0;
@@ -31,13 +27,16 @@ const Navigation:React.FC = () => {
                         left: -115px;
                         z-index: 10;
                         -webkit-transition-property: all;
-                        -webkit-transition-duration: 2s;
+                        -webkit-transition-duration: 1s;
                     }
                     .nav-links {
                         transform: translateX(-70%);
                         padding-right: 10px;
                         -webkit-transition-property: all;
-                        -webkit-transition-duration: 2s;
+                        -webkit-transition-duration: 1s;
+                    }
+                    .nav-links:hover {
+                        font-family: 'Baloo-2-900';
                     }
                     #nav-box:hover, .nav-links {
                         cursor: pointer;

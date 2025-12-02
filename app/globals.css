@@ -12,9 +12,17 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --yellow: #fbe87d;
+  --green: #97FB7D;
+  --d-green: #6db55a;
+  --orange: #fbd17d;
+  --red: #FBA17D ;
+  --blue: #7DCBFB;
+  --cream: #FFF8E9;
 }
 
 body {
   background-image: url("/background-img.png");
   font-family: 'Baloo-2-300';
+  width: 100vw;
 }

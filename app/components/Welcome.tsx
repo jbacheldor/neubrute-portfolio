@@ -13,7 +13,7 @@ const Welcome:React.FC = () => {
         }
     )
 
-    const techStack = ['Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro', 'Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro']
+    const techStack = ['Typescript', 'Javascript', 'Next.JS', 'React', 'Turso', 'Supabase', 'Astro', 'Figma']
 
     const getTime = () => {
         const date = new Date();
@@ -56,9 +56,9 @@ const Welcome:React.FC = () => {
                         Based in NYC. Currently:
                     </div>
                     <div id="clock">
-                        <p id="egg">{time.pm ? 'PM' : 'AM'}</p>
+                        <p id="egg">12/1</p>
                         <p id="time">{`${time.hour}:${time.minute}`}</p>
-                        <p id="egg2">AL</p>
+                        <p id="egg2">{time.pm ? 'PM' : 'AM'}</p>
                     </div>
                 </div>
                 <div id="intro-badge">
@@ -69,8 +69,16 @@ const Welcome:React.FC = () => {
                     <p>I’m a passionate web developer focused on end-to-end development from project specs, ux/ui, to optimization and scaling. I focus on bringing to life creative ideas in original ways.</p>
                 </div>
             </div>
+            <h3>Tech Stack</h3>
             <div id="carosel-wrapper">
                 <div id="carosel">
+                    {techStack.map((val, index)=> (
+                        <div className="techStack" key={index}>
+                            {val}
+                        </div>
+                    ))}
+                </div>
+                <div aria-hidden id="carosel">
                     {techStack.map((val, index)=> (
                         <div className="techStack" key={index}>
                             {val}
@@ -81,10 +89,6 @@ const Welcome:React.FC = () => {
         
         <style jsx>
             {`
-            @keyframes scroll {
-                0% { transform: translateX(0); }
-                100% { transform: translateX(calc(-250px * 7))}
-            }
             @media (min-width: 200px){
                 #middle-section {
                     margin: 5%;
@@ -112,7 +116,7 @@ const Welcome:React.FC = () => {
                 align-items: center;
             }
             #intro-badge {
-                background-color: #FFF8E9;
+                background-color: var(--cream);
                 border: 2px solid black;
                 // box-shadow: 4px 4px black;
                 border-radius: 20px;
@@ -137,27 +141,37 @@ const Welcome:React.FC = () => {
                 border-radius: 20px;
                 border: 2px solid black;
             }
+            @keyframes scroll {
+                from {translate: 0;}
+                to {translate: -100%}
+            }
             #carosel-wrapper {
                 width: 80%;
-                overflow: hidden;
+                display: flex;
+                overflow-x: auto;
+                background-color: var(--yellow);
+                border: 2px solid black;
+                border-radius: 20px;
             }
             #carosel {
                 display: flex;
                 flex-direction: row;
-                animation: scroll 50s linear infinite;
-                width: calc(250px * 14);
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+                animation: scroll 25s infinite linear;
+                padding-right: 1em;
             }
             .techStack {
+                flex: 0 0 5em;
                 font-family: 'Baloo-2-900';
                 border-radius: 20px;
-                background-color: #97FB7D;
-                box-shadow: 4px 4px black;
+                background-color: var(--orange);
                 border: 2px solid black;
-                padding: 10px 20px;
                 min-width: 150px;
                 text-align: center;
-                width: fit-content;
                 margin: 10px;
+                padding: 10px 20px;
             }
             #time {
                 justify-self: center;
@@ -174,19 +188,17 @@ const Welcome:React.FC = () => {
                 right: 10px;
             }
             #clock {
-                background-color: #FBD17D;
+                background-color: var(--orange);
                 border: 2px solid black; 
                 font-family: Baloo-2-900;
-                box-shadow: 4px 4px black;
                 border-radius: 15px;
                 width: 170px;
                 position: relative;
                 margin: 20px 10px;
             }
             #location {
-                background-color: #FBE87D;
+                background-color: var(--yellow);
                 border: 2px solid black;
-                box-shadow: 4px 4px black;
                 border-radius: 20px;
                 padding: 10px 20px;
                 margin: 10px;

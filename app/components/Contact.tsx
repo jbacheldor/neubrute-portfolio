@@ -41,6 +41,7 @@ const Contact:React.FC = () => {
 
     return (
         <div id="CONTACT">
+            <p id="cta">Looking to fill a fullstack or front-end web developer role? Fill out the form below and I'll send you an email shortly with next steps!</p>
             <form onSubmit={(e)=>submitForm(e)}>
                 <h2>CONTACT</h2>
                 <label>
@@ -70,17 +71,28 @@ const Contact:React.FC = () => {
                             width: 50ch;
                         }
                     }
+                    #cta {
+                        background-color: var(--yellow);
+                        border: 2px solid black;
+                        border-radius: 20px;
+                        padding: 15px;
+                        width: 40%;
+                        margin: 10px;
+                        font-family: 'Baloo-2-300'
+                    }
                     #CONTACT {
                         font-family: 'Baloo-2-900';
                         display: flex;
                         justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
                     }
                     h2 {
                         font-size: 40px;
                         text-align: center;
                     }
                     form { 
-                        background-color: #FBD17D;
+                        background-color: var(--orange);
                         box-shadow: 4px 4px black;
                         border: 2px black solid;
                         border-radius: 20px;
@@ -105,10 +117,10 @@ const Contact:React.FC = () => {
                         box-shadow: 4px 4px black;
                         border: 2px solid black;
                         border-radius: 20px;
-                        background-color: #FFF8E9;
+                        background-color: var(--cream);
                     }
                     button {
-                        background-color: #97FB7D;
+                        background-color: var(--green);
                         box-shadow: 4px 4px black;
                         border: 2px solid black;
                         border-radius: 20px;
@@ -124,6 +136,8 @@ const Contact:React.FC = () => {
                     }
                     button:hover {
                         cursor: pointer;
+                        background-color:  var(--d-green);
+                        transform: translateY(2px);
                     }
                     
                 `}
