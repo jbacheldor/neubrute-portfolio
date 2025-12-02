@@ -24,7 +24,7 @@ const Project:React.FC<Props> = ({title, website, date, image, description, repo
                     }} alt={title} src={image} height={100} width={270}/>
             <h3>{title}</h3>
             <p id="year">{date}</p>
-            <p id="desc" dangerouslySetInnerHTML={{__html: description}}></p>
+            <p id="desc" dangerouslySetInnerHTML={{__html: description}} />
             <div id="bottom">
                 <a href={repo} target="_blank">repo</a>
                 <a href={website} target="_blank">website</a>

@@ -41,7 +41,6 @@ const Contact:React.FC = () => {
 
     return (
         <div id="CONTACT">
-            {/* <p id="cta">Looking to fill a fullstack or front-end web developer role? Fill out the form below and I'll send you an email shortly with next steps!</p> */}
             <form onSubmit={(e)=>submitForm(e)}>
                 <h2>CONTACT</h2>
                 <label>
@@ -72,6 +71,7 @@ const Contact:React.FC = () => {
                         }
                     }
                     #cta {
+                        margin-top: 100px;
                         background-color: var(--yellow);
                         border: 2px solid black;
                         border-radius: 20px;
@@ -92,6 +92,7 @@ const Contact:React.FC = () => {
                         text-align: center;
                     }
                     form { 
+                        margin-top: 50px;
                         background-color: var(--orange);
                         box-shadow: 4px 4px black;
                         border: 2px black solid;

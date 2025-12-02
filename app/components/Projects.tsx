@@ -6,11 +6,12 @@ import Project from "./Project";
 import gsap from "gsap";
 import { useEffect, useRef } from "react";
 import { ScrollTrigger } from "gsap/all";
+import Header from "./duolingo/Header";
 const ProjectList = [
     {
         image: '/drag-and-drop.png',
         title: 'Hangul Drag and Drop',
-        description: "A simple vanilla js game designed to teach users the Korean Alphabet - inspired by <a target='_blank' href='https://endual.com/'>Adrians</a> <a target='_blank' href='https://drlingua.com/japanese/games/kana-bento/'>Japanese Drag and Drop Game</a>",
+        description: "A simple <b style='font-family: Baloo-2-700'>vanilla js</b> game designed to teach users the Korean Alphabet - inspired by <a target='_blank' style='text-decoration: underline' href='https://endual.com/'>Adrian's</a> <a target='_blank' style='text-decoration: underline' href='https://drlingua.com/japanese/games/kana-bento/'>Japanese Drag and Drop Game</a>",
         date: '2024',
         website: 'https://github.com/jbacheldor/dragAndDropHangul',
         repo: 'https://jbacheldor.github.io/dragAndDropHangul/'
@@ -18,7 +19,7 @@ const ProjectList = [
     {
         image: '/verb.png',
         title: 'Japanese Verb Conjugation',
-        description: 'A vanilla js game designed to help teach Japanese conjugation to beginners by matching vocabulary with grammar points with when they are introduced in the Japanese textbook: Genki.',
+        description: 'A <b style="font-family: Baloo-2-700">vanilla js</b> game designed to help teach Japanese conjugation to beginners by matching vocabulary with grammar points with when they are introduced in the Japanese textbook: Genki.',
         date: '2025',
         website: 'https://jbacheldor.github.io/japaneseConjugator/',
         repo: 'https://github.com/jbacheldor/japaneseConjugator'
@@ -26,7 +27,7 @@ const ProjectList = [
     {
         image: '/hottakes.png',
         title: 'Hot Takes',
-        description: 'Inspired by Subway Hotcakes with Kareem Rahma and Kahoot - this website allows individuals to submit hot takes and then guess on which takes are their peers, with corresponding accuracy rates, using game-based isolation! <a target="_blank" href="https://www.linkedin.com/in/bdettmer/">Bradley Dettmer</a> and I pair programmed this website for a non-programming talk at the Recurse Center.',
+        description: 'A <b style="font-family: Baloo-2-700">Next.JS, Typescript, & Supabase</b> Web app inspired by Subway Hotcakes with Kareem Rahma and Kahoot - this website allows individuals to submit hot takes and then guess on which takes are their peers, with corresponding accuracy rates, using game-based isolation! <a style="text-decoration: underline" target="_blank" href="https://www.linkedin.com/in/bdettmer/">Bradley Dettmer</a> and I pair programmed this website for a non-programming talk at the Recurse Center.',
         date: '2025',
         website: '',
         repo: 'https://github.com/jbacheldor/hot_takes'
@@ -34,7 +35,7 @@ const ProjectList = [
     {
         image: '/the-lineup.png',
         title: 'Crush Tracker - WIP',
-        description: "A Next.JS website using firebase auth, turso, and typescript, to allow users to make notes about their crushes, share with a choosen pool of individuals, and allow those individuals the opporunity to give feedback. WIP - please email me if you'd like the demo credentials.",
+        description: "A <b style='font-family: Baloo-2-700'>Next.JS</b> website using firebase auth, <b style='font-family: Baloo-2-700'>turso</b>, and <b style='font-family: Baloo-2-700'>typescript</b>, to allow users to make notes about their crushes, share with a choosen pool of individuals, and allow those individuals the opporunity to give feedback. WIP - please email me if you'd like the demo credentials.",
         date: '2025',
         repo: 'https://github.com/jbacheldor/thelineup',
         website: 'https://the-lineup.netlify.app/'
@@ -42,43 +43,10 @@ const ProjectList = [
 ]
 
 const Projects:React.FC = () => {
-    gsap.registerPlugin(ScrollTrigger);
-    
-    const colorwheel = useRef(null)
-
-    useEffect(()=> {
-        // this is working!
-        gsap.to(colorwheel.current, {
-            scrollTrigger: {
-                trigger: "#third",
-                start: 'center bottom',
-                end: "150% 150%",
-                // markers: true
-                scrub: true,
-            },
-            transformOrigin: '50% 100%',
-            // scrub: 3,
-            start: 'top top',
-            end: 'bottom bottom',
-            repeat: 0,
-            // duration: 2,
-            rotationZ: 65,
-            ease: "linear"
-        });
-
-
-
-    }, [])
-
-
-
     return (
         <div id="PROJECTS">
-            <h2>Projects</h2>
-            <div id="Color-Wheel">
-                <div id="third"><img ref={colorwheel} id="" src="./group 24.svg"></img></div>
-            </div>
             <div id='project-wrapper'>
+            <Header title='Personal Projects' subtitle="Recurse and Beyond" link="https://github.com/jbacheldor" name="Github" pic="/github-icon.png"/>            
             <div id="project-list">
             {ProjectList.map((val, index)=> (
                 <Project key={index} {...val}/>
@@ -97,12 +65,8 @@ const Projects:React.FC = () => {
                             margin-left: 0px;
                         }
                         #project-list {
-                            margin-top: 100px;
+                            // margin-top: 100px;
                             width: 70%;
-                        }
-                        #project-wrapper {
-                            display: flex;
-                            justify-content: center;
                         }
                     }
 
@@ -116,20 +80,42 @@ const Projects:React.FC = () => {
                             margin-left: 200px;
                         }
                         #project-list {
-                            margin-top: 600px;
+                            // margin-top: 600px;
                             width: 60%;
                         }
-                        #PROJECTS {
-                            display: flex;
-                            justify-content: center;
-                        }
+                    }
+
+                    #project-wrapper {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        width: 70%;
+                        margin: 20px 0;
+                    }
+                    #section-badge {
+                        border-radius: 20px;
+                        border: 2px solid black;
+                        background-color: var(--red);
+                        padding: 10px;
+                        width: fit-content;
+                        margin: 20px;
+                        font-family: Baloo-2-900;
+                        
+                    }
+                    #PROJECTS {
+                        display: flex;
+                        justify-content: center;
+                        flex-direction: column;
+                        align-items: center;
+                        width: 100%;
                     }
                     #project-list {
-                        display: flex;
-                        flex-direction: row;
-                        overflow: scroll;
+                        display: grid;
+                        grid-template-columns: auto auto;
                         border: 2px solid black;
-                        margin-bottom: 50px;
+                        width: min-content;
+                        margin: 30px 0;
                         border-radius: 20px;
                         background-color: var(--blue);
                     }
