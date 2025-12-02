@@ -42,6 +42,7 @@ const Welcome:React.FC = () => {
     }
 
     useEffect(()=> {
+        getTime()
         const timeInterval = setInterval(() => {
                 getTime()
             }, 1000);

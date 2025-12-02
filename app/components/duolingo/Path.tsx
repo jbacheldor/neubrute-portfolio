@@ -12,9 +12,9 @@ const Path:React.FC = () => {
     }
 
     return (
-        <div id='path-wrapper'>
+        <div id='EXPERIENCE'>
         <div id="path-body">
-            <Header/>
+            <Header title='Professional Career' subtitle="About Me" link="/Jessica-Bacheldor-Resume.pdf" name="Resume" pic="/resume.svg"/>
             <div id="path">
                 {buttonPaths.map((value, index)=> {
                     const options = [50, 45, 40, 45, 50, 55, 50, 45, 40]
@@ -24,7 +24,7 @@ const Path:React.FC = () => {
         </div>
             <style jsx>
                 {`
-                    #path-wrapper {
+                    #EXPERIENCE {
                         width: 100%;
                         display: flex;
                         justify-content: center;

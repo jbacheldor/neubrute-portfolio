@@ -1,22 +1,30 @@
 'use client'
 
-const Header:React.FC = () => {
+type Props = {
+    title: string,
+    subtitle: string,
+    link: string,
+    pic: string,
+    name: string,
+}
+
+const Header:React.FC<Props> = ({title, subtitle, name, link, pic}) => {
 
     return (
-        <div id="ABOUT">
+        <div id="header-wrapper">
             <div id="header">
-                <span id="section" style={{fontSize: '18px'}}>Professional Career</span>
-                <span id="intro" >About Me</span>
+                <span id="section" style={{fontSize: '18px'}}>{title}</span>
+                <span id="intro" >{subtitle}</span>
             </div>
             <div id="resume-button">
-                <span id="section" style={{color: 'black'}}>Resume</span>
-                <a target="_blank" href="/Jessica-Bacheldor-Resume.pdf">
-                    <img src="/resume.svg" width={"45px"} height={"45px"}/> 
+                <span id="section" style={{color: 'black'}}>{name}</span>
+                <a target="_blank" href={link}>
+                    <img src={pic} width={"45px"} height={"45px"}/> 
                 </a>
             </div>
         <style jsx>
             {`
-                #ABOUT {
+                #header-wrapper {
                     background-color: var(--green);
                     display: flex;
                     flex-direction: row;

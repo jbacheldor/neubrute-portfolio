@@ -8,10 +8,15 @@
     src: url('/fonts/Baloo2-ExtraBold.ttf'); 
 }
 
+@font-face {
+    font-family: 'Baloo-2-700';
+    src: url('/fonts/Baloo2-Bold.ttf'); 
+}
+
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #fbe87d;
   --yellow: #fbe87d;
   --green: #97FB7D;
   --d-green: #6db55a;
