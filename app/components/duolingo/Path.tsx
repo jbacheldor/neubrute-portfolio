@@ -29,7 +29,7 @@ const Path:React.FC = () => {
                         display: flex;
                         justify-content: center;
                         position: relative;
-                        height: calc(100vh * 1.5);
+                        height: calc(7 * 155px); 
                     }
                     #path-body {
                         display: flex;
