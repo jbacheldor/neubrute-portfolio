@@ -41,7 +41,7 @@ const Contact:React.FC = () => {
 
     return (
         <div id="CONTACT">
-            <p id="cta">Looking to fill a fullstack or front-end web developer role? Fill out the form below and I'll send you an email shortly with next steps!</p>
+            {/* <p id="cta">Looking to fill a fullstack or front-end web developer role? Fill out the form below and I'll send you an email shortly with next steps!</p> */}
             <form onSubmit={(e)=>submitForm(e)}>
                 <h2>CONTACT</h2>
                 <label>

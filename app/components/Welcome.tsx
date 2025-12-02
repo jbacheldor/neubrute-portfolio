@@ -63,10 +63,12 @@ const Welcome:React.FC = () => {
                     <div id="location">
                         Based in NYC. Currently:
                     </div>
+                    
                     <div id="clock">
                         <p id="egg">{time.month}/{time.day}</p>
                         <p id="time">{`${time.hour}:${time.minute}`}</p>
                         <p id="egg2">{time.pm ? 'PM' : 'AM'}</p>
+                        
                     </div>
                 </div>
                 <div id="intro-badge">

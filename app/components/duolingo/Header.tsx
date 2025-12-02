@@ -5,11 +5,11 @@ const Header:React.FC = () => {
     return (
         <div id="ABOUT">
             <div id="header">
-                <span id="intro">Professional Career</span>
-                <span id="section" style={{fontSize: '18px'}}>About Me</span>
+                <span id="section" style={{fontSize: '18px'}}>Professional Career</span>
+                <span id="intro" >About Me</span>
             </div>
             <div id="resume-button">
-                <span id="section">Resume</span>
+                <span id="section" style={{color: 'black'}}>Resume</span>
                 <a target="_blank" href="/Jessica-Bacheldor-Resume.pdf">
                     <img src="/resume.svg" width={"45px"} height={"45px"}/> 
                 </a>
@@ -35,6 +35,7 @@ const Header:React.FC = () => {
                 span#intro {
                     font-size: 20px;
                     color: black;
+
                 }
                 span#section {
                     color: #5E9950;
@@ -59,9 +60,10 @@ const Header:React.FC = () => {
                     display: flex;
                     flex-direction: column;
                     flex: 2;
-                    padding: 15px;
+                    padding: 20px;
                     border: 3px solid black;
                     border-radius: 15px 0 0 15px;
+                    justify-content: center;
                 }
                 #base {
                     width: 100%;
