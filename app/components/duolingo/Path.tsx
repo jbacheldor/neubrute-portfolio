@@ -5,11 +5,6 @@ import PathButton from "./PathButton";
 import { buttonPaths } from "@/app/data/paths";
 
 const Path:React.FC = () => {
-    const [open, setOpen] = useState('')
-
-    const isOpen = (e: string) => {
-        setOpen(e)
-    }
 
     return (
         <div id='EXPERIENCE'>

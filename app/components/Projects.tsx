@@ -3,9 +3,6 @@
 import Image from "next/image";
 
 import Project from "./Project";
-import gsap from "gsap";
-import { useEffect, useRef } from "react";
-import { ScrollTrigger } from "gsap/all";
 import Header from "./duolingo/Header";
 const ProjectList = [
     {

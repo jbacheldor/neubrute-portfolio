@@ -33,7 +33,7 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
                 // end when the bottom of the tool-tip hits the center of the viewport
                 end: '+=50',
                 // this ties animation progress directly to scroll
-                scrub: true,
+                // scrub: true,
             },
             // duration: 2,
              start: '+=100',
@@ -41,6 +41,7 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
             // end: 'top center',
             // visbility: 'visible',
             autoAlpha: 1,
+            x: ((index % 2) === 0) ? 330 : -240
         })
     }, [])
 
@@ -51,11 +52,10 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
 
     return (
         <div>
-            <div id="button" style={{right: `${right}%`, top: `${top*110 + 150}px`}} onClick={()=>openToolTip()}>
+            <div id="button" style={{right: `${right}%`, top: `${top*110 + 200}px`}} onClick={()=>openToolTip()}>
                 <img src={type}/>
             </div>
-            {/* {tooltip &&  */}
-                <div id="tool-tip" className={`tool-tip-${index}`} style={{top: `${top*110 + 250}px`, right: `${rightOffset}%`}}>
+                <div id="tool-tip" className={`tool-tip-${index}`} style={{top: `${top*110 + 150}px`, right: `${rightOffset}%`}}>
                     {data && 
                         <>
                             <h3>{data.title}</h3>
@@ -75,9 +75,6 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
                             right: 40%;
                         }
                     }
-                    @media (min-width: 800px){
-
-                    }
                     .tool-tip-${index} {
                         visibility: hidden;
                     }
@@ -93,7 +90,6 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
                         display: flex;
                         flex-direction: row;
                         justify-content: space-between;
-                        // padding-right: 15px;
                         padding-top: 5px;
                         padding-bottom: 10px;
                     }

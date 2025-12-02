@@ -92,7 +92,6 @@ const Contact:React.FC = () => {
                         text-align: center;
                     }
                     form { 
-                        margin-top: 50px;
                         background-color: var(--orange);
                         box-shadow: 4px 4px black;
                         border: 2px black solid;
