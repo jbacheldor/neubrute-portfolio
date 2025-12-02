@@ -100,7 +100,7 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
                     div#tool-tip {
                         font-family: Baloo-2-300;
                         position: absolute;
-                        background-color: #FBD17D;
+                        background-color: var(--orange);
                         width: 350px;
                         min-height: 150px;
                         border: 2px black solid;

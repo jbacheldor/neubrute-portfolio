@@ -31,7 +31,7 @@ const Footer:React.FC = () => {
                         align-items: center;
                     }
                     #footer {
-                        background-color: #FBE87D;
+                        background-color: var(--yellow);
                         font-family: 'Baloo-2-900';
                         // font-size: 20px;
                         // width: 75%;

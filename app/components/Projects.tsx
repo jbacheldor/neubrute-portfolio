@@ -74,6 +74,7 @@ const Projects:React.FC = () => {
 
     return (
         <div id="PROJECTS">
+            <h2>Projects</h2>
             <div id="Color-Wheel">
                 <div id="third"><img ref={colorwheel} id="" src="./group 24.svg"></img></div>
             </div>
@@ -130,7 +131,7 @@ const Projects:React.FC = () => {
                         border: 2px solid black;
                         margin-bottom: 50px;
                         border-radius: 20px;
-                        background-color: #7DCBFB;
+                        background-color: var(--blue);
                     }
                     #first {
                         position: absolute;
