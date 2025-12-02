@@ -10,6 +10,8 @@ const Welcome:React.FC = () => {
             minute: '',
             second: '', 
             pm: false,
+            month: '',
+            day: ''
         }
     )
 
@@ -19,15 +21,21 @@ const Welcome:React.FC = () => {
         const date = new Date();
         const parsed = date.toLocaleString('en-US', {
             timeZone: 'America/New_York',
-        }).split(',')[1].split(':')
+        }).split(',')
 
-        const pm = parsed[2].split(' ')
+        const time = parsed[1].split(':')
+
+        const month_date = parsed[0].split('/')
+
+        const pm = time[2].split(' ')
 
         setTime({
-            hour: parsed[0],
-            minute: parsed[1],
-            second: parsed[2],
-            pm: pm[1] == 'PM' ? true : false
+            hour: time[0],
+            minute: time[1],
+            second: time[2],
+            pm: pm[1] == 'PM' ? true : false,
+            month: month_date[0],
+            day: month_date[1],
         })
 
         return Number(pm[0])
@@ -56,7 +64,7 @@ const Welcome:React.FC = () => {
                         Based in NYC. Currently:
                     </div>
                     <div id="clock">
-                        <p id="egg">12/1</p>
+                        <p id="egg">{time.month}/{time.day}</p>
                         <p id="time">{`${time.hour}:${time.minute}`}</p>
                         <p id="egg2">{time.pm ? 'PM' : 'AM'}</p>
                     </div>
@@ -69,7 +77,6 @@ const Welcome:React.FC = () => {
                     <p>I’m a passionate web developer focused on end-to-end development from project specs, ux/ui, to optimization and scaling. I focus on bringing to life creative ideas in original ways.</p>
                 </div>
             </div>
-            <h3>Tech Stack</h3>
             <div id="carosel-wrapper">
                 <div id="carosel">
                     {techStack.map((val, index)=> (
