@@ -26,8 +26,23 @@
   --cream: #FFF8E9;
 }
 
+html {
+  overscroll-behavior: none;
+  scrollbar-width: none;
+}
+
 body {
-  background-image: url("/background-img.png");
+  /* background-image: url("/background-img.png"); */
+  /* background-color: #e5e5f7; */
+  /* background-image:  background-color: #FFF8E9; */
+  /* opacity: 0.8; */
+  background-image:  linear-gradient(#7dcbfb 2px, transparent 2px), linear-gradient(to right, #7dcbfb 2px, #FFF8E9 2px);
+  background-size: 40px 40px;
+  background-position: center;
   font-family: 'Baloo-2-300';
   width: 100vw;
+}
+
+body::-webkit-scrollbar {
+  /* display: none; */
 }

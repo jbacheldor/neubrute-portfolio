@@ -158,7 +158,7 @@ const Welcome:React.FC = () => {
             #carosel-wrapper {
                 width: 80%;
                 display: flex;
-                overflow-x: auto;
+                overflow-x: hidden;
                 background-color: var(--yellow);
                 border: 2px solid black;
                 border-radius: 20px;
