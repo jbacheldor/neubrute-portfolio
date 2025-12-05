@@ -233,20 +233,26 @@ const Welcome:React.FC = () => {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                
+                justify-content: center;   
+                margin: 10px 0;
             }
             #middle {
                 font-family: Baloo-2-900;
                 font-size: 30px;
-                height: 25%;
-                margin: 30px;
+                padding: 10px 0;
+                margin-bottom: 35px;
+                background-color: var(--cream);
+                width: 100%;
+                text-align: center;
             }
             #badge {
-                height: 220px;
-                width: 330px;
-                background: url('./NameTag.svg');
-                background-repeat: no-repeat;
-                background-size: 330px 220px;
+                height: 200px;
+                width: 310px;
+                box-shadow: 4px 4px black;
+                border-radius: 20px;
+                border: 2px solid black;
+                background-color: var(--blue);
+                margin: 20px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
