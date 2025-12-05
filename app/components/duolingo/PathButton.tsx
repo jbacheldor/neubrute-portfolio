@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 
@@ -8,21 +8,14 @@ type Props = {
     type: string,
     right: number,
     top: number,
-    // onClick: (id: string) => void,
     data?: any,
     index: number,
 }
 
 const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
-    const [tooltip, setToolTip] = useState(false) 
     gsap.registerPlugin(ScrollTrigger);
 
     let rightOffset
-
-    const openToolTip = () => {
-        // console.log(object)
-        setToolTip(!tooltip)
-    }
 
     useEffect(()=> {
         gsap.to(`.tool-tip-${index}`, {
@@ -52,7 +45,7 @@ const PathButton:React.FC<Props> = ({type, index, right, top, data}) => {
 
     return (
         <div>
-            <div id="button" style={{right: `${right}%`, top: `${top*110 + 200}px`}} onClick={()=>openToolTip()}>
+            <div id="button" style={{right: `${right}%`, top: `${top*110 + 200}px`}}>
                 <img src={type}/>
             </div>
                 <div id="tool-tip" className={`tool-tip-${index}`} style={{top: `${top*110 + 150}px`, right: `${rightOffset}%`}}>

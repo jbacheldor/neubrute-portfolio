@@ -1,0 +1,233 @@
+/* navigation */
+#nav-box {
+    font-family: Baloo-2-300;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 140px;
+    background-color: var(--cream);
+    outline: 2px solid black;
+    box-shadow: 4px 4px black;
+    border-radius: 0 20px 20px 0;
+    position: fixed;
+    text-align: right;
+    top: 5%;
+    left: -115px;
+    z-index: 10;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+}
+.nav-links {
+    transform: translateX(-70%);
+    padding-right: 10px;
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 1s;
+}
+.nav-links:hover {
+    font-family: 'Baloo-2-900';
+}
+#nav-box:hover, .nav-links {
+    cursor: pointer;
+    left: -20px;
+}
+#nav-box:hover .nav-links {
+    transform: translateX(0px);
+}
+#nav-box > a:first-child {
+    border-radius: 0 20px 0 0;
+}
+#nav-box > a:last-child {
+    margin: 0;
+    border-radius: 0 0 20px 0;
+}
+#nav-box > a {
+    padding-top: 10px;
+    padding-right: 5px;
+    padding-bottom: 40px;
+    background-color: lightgrey;
+    width: 100%;
+    margin-bottom: 20px;
+}
+/* header */
+#header-wrapper {
+    background-color: var(--green);
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    font-weight: 800;
+    margin: 20px;
+    border-radius: 15px;
+    box-shadow: 4px 10px #6db55a, 2px 13px #000, 7px 12px #000;
+    font-family: "Baloo-2-900";
+}
+
+#header-shadow {
+    width: 80%;
+
+}
+span#intro {
+    font-size: 20px;
+    color: black;
+
+}
+span#section {
+    color: #5E9950;
+}
+#resume-button {
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#resume-button:hover {
+    background-color:  var(--d-green);
+    transform: translateY(1px);
+    cursor: pointer;
+}
+#resume-button:hover > span {
+    color: black;
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    flex: 2;
+    padding: 20px;
+    border: 3px solid black;
+    border-radius: 15px 0 0 15px;
+    justify-content: center;
+}
+#base {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* path */
+
+#EXPERIENCE {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: calc(7 * 155px); 
+}
+#path-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 70%;
+}
+#path {
+    display: flex;
+    flex-direction: column;
+}
+
+/* footer */
+@media (min-width: 200px){
+    #footer {
+        width: 80%;
+        font-size: 18px;
+    }
+    #project-list {
+        width: 70%;
+    }
+}
+@media (min-width: 800px){
+    #footer {
+        width: 75%;
+        font-size: 20px;
+    }
+    #project-list {
+        width: 60%;
+    }
+}
+
+#icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+#footer {
+    background-color: var(--yellow);
+    font-family: 'Baloo-2-900';
+    box-shadow: 4px 4px black;
+    border: 2px solid black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    justify-self: center;
+    margin: 40px;
+}
+
+/* projects */
+
+/* these aren't working in this file */
+#project-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    margin: 20px 0;
+}
+#PROJECTS {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+#project-list {
+    display: grid;
+    grid-template-columns: auto auto;
+    border: 2px solid black;
+    width: min-content;
+    margin: 30px 0;
+    border-radius: 20px;
+    background-color: var(--blue);
+}
+
+/* project file */
+
+#desc {
+    margin: 0 10px 50px 10px;
+}
+#bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 10px;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+}
+#Project-Card {
+    background-color: var(--cream);
+    box-shadow: 4px 4px black;
+    border: 2px solid black;
+    text-align: center;
+    border-radius: 20px;
+    position: relative;
+    min-width: 300px;
+    min-height: 400px;
+    margin: 20px 20px;
+    font-family: 'Baloo-2-300';
+}
+a {
+    text-decoration: underline;
+}
+#next {
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+}
+h3 {
+    font-family: 'Baloo-2-900';
+}

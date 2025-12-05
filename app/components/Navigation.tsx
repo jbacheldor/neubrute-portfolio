@@ -1,4 +1,4 @@
-'use client'
+import './style.css';
 
 const Navigation:React.FC = () => {
     const sections = [{text: "WELCOME", color: "#97FB7D"}, {text: "PROJECTS", color: "#7DCBFB"}, {text: "EXPERIENCE", color: "#FBA17D"}, {text: "CONTACT", color: "#FBD17D"}];
@@ -9,59 +9,6 @@ const Navigation:React.FC = () => {
             {sections.map((value, index)=> (
                 <a key={index} style={{backgroundColor : value.color}} href={`#${value.text}`} color={value.color}><div className="nav-links" key={index}>{value.text}</div></a>
             ))}
-            <style jsx>
-                {`
-                    #nav-box {
-                        font-family: Baloo-2-300;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: flex-end;
-                        width: 140px;
-                        background-color: var(--cream);
-                        outline: 2px solid black;
-                        box-shadow: 4px 4px black;
-                        border-radius: 0 20px 20px 0;
-                        position: fixed;
-                        text-align: right;
-                        top: 5%;
-                        left: -115px;
-                        z-index: 10;
-                        -webkit-transition-property: all;
-                        -webkit-transition-duration: 1s;
-                    }
-                    .nav-links {
-                        transform: translateX(-70%);
-                        padding-right: 10px;
-                        -webkit-transition-property: all;
-                        -webkit-transition-duration: 1s;
-                    }
-                    .nav-links:hover {
-                        font-family: 'Baloo-2-900';
-                    }
-                    #nav-box:hover, .nav-links {
-                        cursor: pointer;
-                        left: -20px;
-                    }
-                    #nav-box:hover .nav-links {
-                        transform: translateX(0px);
-                    }
-                    #nav-box > a:first-child {
-                        border-radius: 0 20px 0 0;
-                    }
-                    #nav-box > a:last-child {
-                        margin: 0;
-                        border-radius: 0 0 20px 0;
-                    }
-                    #nav-box > a {
-                        padding-top: 10px;
-                        padding-right: 5px;
-                        padding-bottom: 40px;
-                        background-color: lightgrey;
-                        width: 100%;
-                        margin-bottom: 20px;
-                    }
-                `}
-            </style>
         </div>
     )
 }

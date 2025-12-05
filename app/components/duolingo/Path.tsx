@@ -1,8 +1,7 @@
-'use client'
-import { useState } from "react";
 import Header from "./Header";
 import PathButton from "./PathButton";
 import { buttonPaths } from "@/app/data/paths";
+import '../style.css'
 
 const Path:React.FC = () => {
 
@@ -17,27 +16,6 @@ const Path:React.FC = () => {
                 })}
             </div>
         </div>
-            <style jsx>
-                {`
-                    #EXPERIENCE {
-                        width: 100%;
-                        display: flex;
-                        justify-content: center;
-                        position: relative;
-                        height: calc(7 * 155px); 
-                    }
-                    #path-body {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        width: 70%;
-                    }
-                    #path {
-                        display: flex;
-                        flex-direction: column;
-                    }
-                `}
-            </style>
         </div>
     )
 }
